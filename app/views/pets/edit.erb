@@ -9,8 +9,13 @@
 
 <label>Choose an existing owner:</label>
 <% Owner.all.each do |owner| %>
-<input type="checkbox" name="pet[owner_id]" id="<%=owner.id%>" value="<%=owner.id%>">
-<%=owner.id%></input>
+  <% if owner.id == @pet.owner.id %>
+    <input type="radio" name="owner[name]" id="<%=owner.id%>" value="<%=owner.name%>" checked="checked">
+    <%=owner.name%></input>
+  <% else %>
+    <input type="radio" name="owner[name]" id="<%=owner.id%>" value="<%=owner.name%>">
+    <%=owner.name%></input>
+  <% end %>
 <% end %>
 </br>
 <label>and/or, create a new owner:</label>
