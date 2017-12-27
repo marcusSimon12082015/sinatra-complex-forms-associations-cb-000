@@ -33,9 +33,9 @@ class PetsController < ApplicationController
 
   post '/pets/:id' do
     @pet = Pet.find(params[:id])
-    if !params[:owner][:name].empty?
-      @pet.owner = Owner.find(name: params[:owner][:name])
-    end
+    #if !params[:owner][:name].empty?
+    #  @pet.owner = Owner.find(name: params[:owner][:name])
+    #end
     binding.pry
     @pet.update(name: params[:pet][:name])
     redirect to "pets/#{@pet.id}"
