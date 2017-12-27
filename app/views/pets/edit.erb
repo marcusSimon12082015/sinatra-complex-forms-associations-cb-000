@@ -6,7 +6,7 @@
 </br>
 <input type="checkbox" name="owner[name]" id="<%=@pet.owner.id%>" value="<%=@pet.owner.name%>" checked>
 <%=@pet.owner.name%></input>
-<!--
+
 <label>Choose an existing owner:</label>
 <% Owner.all.each do |owner| %>
 <input type="checkbox" name="pet[owner_id]" id="<%=owner.id%>" value="<%=owner.id%>">
@@ -18,6 +18,5 @@
 <label>Name:</label>
 <input type="text" name="owner_name">
 </br>
--->
 <input type="submit" value="Update Pet">
 </form>
