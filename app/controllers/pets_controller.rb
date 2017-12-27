@@ -20,8 +20,8 @@ class PetsController < ApplicationController
   end
 
   get '/post/:id/edit' do
-    binding.pry
     @pet = Pet.find(params[:id])
+    binding.pry
 
   end
 
