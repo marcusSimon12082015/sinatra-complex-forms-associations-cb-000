@@ -32,9 +32,9 @@ class PetsController < ApplicationController
   end
 
   post '/pets/:id' do
-    binding.pry
     @pet = Pet.find(params[:id])
-    @pet.update(params[:name])
+    @pet.update(params[:pet][:name])
+    binding.pry
     redirect to "pets/#{@pet.id}"
   end
 end
